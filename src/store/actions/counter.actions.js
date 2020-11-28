@@ -2,11 +2,11 @@
  * @Author: sylvanas
  * @Date: 2020-11-28 17:48:05
  * @LastEditors: sylvanas
- * @LastEditTime: 2020-11-28 18:10:47
+ * @LastEditTime: 2020-11-28 19:27:21
  * @Description:
  */
 
-import { INCREMENT, DECREMENT } from '../const/counter.const'
+import { INCREMENT, DECREMENT, INCREMENT_ASYNC } from '../const/counter.const'
 
 export const increment = (payload) => ({
 	type: INCREMENT,
@@ -17,3 +17,5 @@ export const decrement = (payload) => ({
 	type: DECREMENT,
 	payload,
 })
+
+export const increment_async = (payload) => ({ type: INCREMENT_ASYNC, payload })
