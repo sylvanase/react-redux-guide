@@ -2,14 +2,16 @@
  * @Author: sylvanas
  * @Date: 2020-11-28 17:48:05
  * @LastEditors: sylvanas
- * @LastEditTime: 2020-11-28 17:54:26
+ * @LastEditTime: 2020-11-28 18:04:20
  * @Description:
  */
 
+import { INCREMENT, DECREMENT } from '../const/counter.const'
+
 export const increment = () => ({
-	type: 'increment',
+	type: INCREMENT,
 })
 
 export const decrement = () => ({
-	type: 'decrement',
+	type: DECREMENT,
 })
