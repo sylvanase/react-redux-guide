@@ -6,9 +6,9 @@ import * as counterActions from '../store/actions/counter.actions'
 function Counter({ count, increment, decrement }) {
 	return (
 		<div>
-			<button onClick={increment}>+</button>
+			<button onClick={() => increment(5)}>+</button>
 			<span>{count}</span>
-			<button onClick={decrement}>-</button>
+			<button onClick={() => decrement(1)}>-</button>
 		</div>
 	)
 }
@@ -18,7 +18,7 @@ function Counter({ count, increment, decrement }) {
 // 3. connect 方法可以让我们获取 dispatch 方法
 
 const mapStateToProps = (state) => ({
-	count: state.count,
+	count: state.counter.count,
 	a: 'b',
 })
 

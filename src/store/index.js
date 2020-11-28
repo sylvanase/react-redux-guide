@@ -2,11 +2,11 @@
  * @Author: sylvanas
  * @Date: 2020-11-28 17:56:56
  * @LastEditors: sylvanas
- * @LastEditTime: 2020-11-28 18:00:40
+ * @LastEditTime: 2020-11-28 18:25:47
  * @Description:
  */
 
 import { createStore } from 'redux'
-import reducer from './reducers/counter.reducer'
+import RootReducer from './reducers/root.reducer'
 
-export const store = createStore(reducer)
+export const store = createStore(RootReducer)
