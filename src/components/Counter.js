@@ -1,13 +1,14 @@
 import React from 'react'
 import { connect } from 'react-redux'
-
-function Counter({ count }) {
-	console.log(props)
+import { bindActionCreators } from 'redux'
+import * as counterActions from '../store/actions/counter.actions'
+// 解构 props
+function Counter({ count, increment, decrement }) {
 	return (
 		<div>
-			<button>+</button>
+			<button onClick={increment}>+</button>
 			<span>{count}</span>
-			<button>-</button>
+			<button onClick={decrement}>-</button>
 		</div>
 	)
 }
@@ -21,4 +22,9 @@ const mapStateToProps = (state) => ({
 	a: 'b',
 })
 
-export default connect(mapStateToProps)(Counter)
+// 返回一个对象，被映射到组件的 props 中
+const mapDispatchToProps = (dispatch) => ({
+	...bindActionCreators(counterActions, dispatch),
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(Counter)
